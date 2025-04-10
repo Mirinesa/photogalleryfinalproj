@@ -1,0 +1,89 @@
+/* Base (Mobile First) Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+#shared-description {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+figure {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* Tablet View - min-width: 772px */
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  figure {
+    border-radius: 50%;
+  }
+
+  figure:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* Large Screen View - min-width: 992px */
+@media (min-width: 992px) {
+  figure {
+    border-radius: 0;
+  }
+
+  figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #f0f0a0;
+  }
+
+  figure {
+    background-color: #222;
+    color: #f0f0a0;
+    border: 1px solid black;
+  }
+}

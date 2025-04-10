@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Final Project</title>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<h1 id="top">Final Project</h1>
+</header>
+<main>
+<p>This custom paragraph describes the color and aesthetic of the selected palette, highlighting how each shade contributes to the overall design.</p>
+<p>Each color brings its own unique character and energy, creating a vibrant and harmonious visual experience.</p>
+<p id="shared-description">Hover over a color to learn more.</p><div class="grid">
+<figure data-description="A bold and energetic shade often used to convey passion or urgency.">
+<img alt="Bright red color" src="images/Red.jpeg" width="200"/>
+<figcaption>Red</figcaption>
+</figure>
+<figure data-description="A vibrant and inviting tone that evokes warmth and enthusiasm.">
+<img alt="Vibrant orange tone" src="images/Orange.png" width="200"/>
+<figcaption>Orange</figcaption>
+</figure>
+<figure data-description="A bright and cheerful color symbolizing optimism and creativity.">
+<img alt="Sunshine yellow shade" src="images/Yellow.png" width="200"/>
+<figcaption>Yellow</figcaption>
+</figure>
+<figure data-description="A calming hue associated with growth, harmony, and nature.">
+<img alt="Natural green hue" src="images/Green.png" width="200"/>
+<figcaption>Green</figcaption>
+</figure>
+<figure data-description="A cool and serene color known for trust and stability.">
+<img alt="Cool blue tint" src="images/Blue.png" width="200"/>
+<figcaption>Blue</figcaption>
+</figure>
+<figure data-description="A deep, introspective shade that adds a sense of mystery.">
+<img alt="Deep indigo color" src="images/Indigo.jpeg" width="200"/>
+<figcaption>Indigo</figcaption>
+</figure>
+<figure data-description="A regal tone representing luxury, imagination, and depth.">
+<img alt="Royal purple shade" src="images/Purple.png" width="200"/>
+<figcaption>Purple</figcaption>
+</figure>
+<figure data-description="A soft and playful color often linked to compassion and fun.">
+<img alt="Soft pink hue" src="images/Pink.jpeg" width="200"/>
+<figcaption>Pink</figcaption>
+</figure>
+<figure data-description="A clean, minimalist color symbolizing clarity and simplicity.">
+<img alt="Clean white tone" src="images/White.png" width="200"/>
+<figcaption>White</figcaption>
+</figure>
+</div>
+</main>
+<footer>
+<a href="#top">Jump to the Top</a>
+</footer>
+<script>
+  const figures = document.querySelectorAll('figure');
+  const desc = document.getElementById('shared-description');
+
+  let hasInteracted = false;
+
+  figures.forEach(figure => {
+    figure.addEventListener('mouseenter', () => {
+      desc.textContent = figure.dataset.description;
+      hasInteracted = true;
+    });
+  });
+</script></body>
+</html>
